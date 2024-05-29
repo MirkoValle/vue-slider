@@ -8,7 +8,7 @@
     <title>Slider</title>
 
     <!-- Fontawesome 6.5.2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,22 +19,17 @@
 <body>
     <div id="app">
         <div class="container">
-            <button><i class="fa-solid fa-angle-left"></i></button>
+            <button @click="slideLeft"><i class="fa-solid fa-angle-left"></i></button>
             <div class="slider-wrapper" tabindex="0">
                 <div class="item">
-                    <img src="img/01.webp" alt="Spiderman" />
+                    <img :src="showedSlide.image" alt="" />
                     <div class="text">
-                        <h3>Spiderman</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
-                        </p>
+                        <h3>{{ showedSlide.title }}</h3>
+                        <p>{{ showedSlide.text }}</p>
                     </div>
                 </div>
             </div>
-            <button><i class="fa-solid fa-angle-right"></i></button>
+            <button @click="slideRight"><i class="fa-solid fa-angle-right"></i></button>
         </div>
 
     </div>
