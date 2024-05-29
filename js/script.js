@@ -27,43 +27,29 @@ createApp({
                 }
             ],
 
-            index: 0,
+            index: 2,
 
             showedSlide: {
-                image: 'img/01.webp',
-                title: 'Marvel\'s Spiderman Miles Morale',
-                text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+                image: 'img/03.webp',
+                title: 'Fortnite',
+                text: "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
             },
         }
     },
     methods: {
         slideLeft: function () {
-            if (this.index > 0) {
-                this.showedSlide = this.slides[this.index];
-                this.index--;
-                console.log(this.showedSlide)
-                console.log(this.index)
-            } else {
-                this.index = Number.parseInt(this.slides.lenght - 1);
-                this.showedSlide = this.slides[this.index];
-                this.index--;
-                console.log(this.showedSlide)
-                console.log(this.index)
+            this.index--;
+            if (this.index < 0) {
+                this.index = Number.parseInt(this.slides.length - 1);
             }
+            this.showedSlide = this.slides[this.index];
         },
         slideRight: function () {
             this.index++;
-            if (this.index < this.slides.lenght) {
-                this.showedSlide = this.slides[this.index];
-                console.log(this.showedSlide)
-                console.log(this.index)
-            } else {
+            if (this.index > this.slides.length - 1) {
                 this.index = 0;
-                this.showedSlide = this.slides[this.index];
-                this.index++;
-                console.log(this.showedSlide)
-                console.log(this.index)
             }
+            this.showedSlide = this.slides[this.index];
         },
 
     }
