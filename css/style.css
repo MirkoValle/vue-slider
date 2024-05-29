@@ -31,3 +31,11 @@
     text-align: right;
     color: white;
 }
+
+
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: .5rem;
+    margin: 2rem;
+}
