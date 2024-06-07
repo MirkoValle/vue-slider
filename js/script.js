@@ -51,6 +51,5 @@ createApp({
             }
             this.showedSlide = this.slides[this.index];
         },
-
     }
 }).mount("#app");
